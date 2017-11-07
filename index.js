@@ -60,7 +60,7 @@ app.get('/users/', function (req, res) {
 /* Get a user by his ID */
 app.get('/users/:id', function (req, res) {
     console.log(req.ip);
-    con.query("SELECT * from users WHERE Sr = " + req.params.id, function (err, result) {
+    con.query("SELECT * from users WHERE ID = " + req.params.id, function (err, result) {
         if (err)
             res.status(500).send(err);
         else
@@ -78,7 +78,7 @@ app.put('/users/:id', function (req, res) {
 
     var query = "UPDATE users SET Name = \"" + req.body.name + "\", ";
     query += "Surname = \"" + req.body.surname + "\", ";
-    query += "Age = " + req.body.age + " WHERE Sr = " + req.params.id;
+    query += "Age = " + req.body.age + " WHERE ID = " + req.params.id;
 
     con.query(query, function (err, result) {
         if (err)
@@ -101,7 +101,7 @@ app.delete('/users/:id', function (req, res) {
     if (req.body.hasOwnProperty("archive")) {
         var query = "UPDATE users SET Archived ="  + req.body.archive;
     } else {
-        query = "DELETE FROM users WHERE Sr = " + req.params.id;
+        query = "DELETE FROM users WHERE ID = " + req.params.id;
     }
     
     con.query(query, function (err, result) {

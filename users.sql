@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2017 at 01:15 PM
+-- Generation Time: Nov 07, 2017 at 01:24 PM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.5.8
 
@@ -27,19 +27,19 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
-  `Sr` int(11) NOT NULL AUTO_INCREMENT,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(50) NOT NULL,
   `Surname` varchar(50) NOT NULL,
   `Age` int(11) NOT NULL,
   `Archived` tinyint(1) NOT NULL,
-  PRIMARY KEY (`Sr`)
+  PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Sr`, `Name`, `Surname`, `Age`, `Archived`) VALUES
+INSERT INTO `users` (`ID`, `Name`, `Surname`, `Age`, `Archived`) VALUES
 (1, 'David', 'John', 21, 0),
 (2, 'Kevin', 'De Bruyne', 26, 0),
 (3, 'Danny', 'Andrew', 57, 0),
