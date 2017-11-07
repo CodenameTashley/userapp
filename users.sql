@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2017 at 01:29 PM
+-- Generation Time: Nov 07, 2017 at 01:15 PM
 -- Server version: 5.6.15-log
 -- PHP Version: 5.5.8
 
@@ -31,17 +31,21 @@ CREATE TABLE IF NOT EXISTS `users` (
   `Name` varchar(50) NOT NULL,
   `Surname` varchar(50) NOT NULL,
   `Age` int(11) NOT NULL,
+  `Archived` tinyint(1) NOT NULL,
   PRIMARY KEY (`Sr`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`Sr`, `Name`, `Surname`, `Age`) VALUES
-(1, 'David', 'John', 21),
-(2, 'Alan', 'Smith', 45),
-(3, 'Danny', 'Andrew', 57);
+INSERT INTO `users` (`Sr`, `Name`, `Surname`, `Age`, `Archived`) VALUES
+(1, 'David', 'John', 21, 0),
+(2, 'Kevin', 'De Bruyne', 26, 0),
+(3, 'Danny', 'Andrew', 57, 0),
+(4, 'Alan', 'Smith', 32, 0),
+(5, 'Andrew', 'Scott', 14, 0),
+(6, 'Jimmy', 'Stap', 31, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
